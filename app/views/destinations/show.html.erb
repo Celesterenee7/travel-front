@@ -1,0 +1,50 @@
+<div class="row">
+<div class="col-md-6">
+<h1 class="title"><%= @destination.name %></h1>
+<br>
+<h4 class="second-title">Reviews for this destination:</h4>
+<% if @destination.reviews.any? %>
+
+<% @destination.reviews.each do |review| %>
+
+  <p>
+    <%= link_to review.author, destination_review_path(@destination, review) %>
+  </p>
+
+<% end %>
+
+<% else %>
+<p>No reviews are listed for this destination.</p>
+<% end %>
+<br>
+<p><%= link_to "Add a review", new_destination_review_path(@destination) %></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="col-md-6">
+<% if @destination.cost != nil %>
+<h3 class="second-title"><%= @destination.name %> Costs:</h3>
+<p>$<%= @destination.cost %></p>
+<% else %>
+<h4>There are no costs listed for this destination yet!</h4>
+<% end %>
+</div>
+<br>
+<br>
+<div class="col-md-6">
+<% if @destination.country_of_origin != nil %>
+<h3 class="second-title">This destination comes from:</h3>
+<p><em><%= @destination.country_of_origin %></em></p>
+<% else %>
+<h4>There are no origins listed for this destination yet!</h4>
+<% end %>
+</div>
+</div>
+<br>
+<p><%= link_to "Edit", edit_destination_path(@destination) %> |
+  <%= link_to "Delete destination", destination_path(@destination),
+  :data => {:confirm => "Are you sure?",
+  :method => "delete"} %> |
+  <%= link_to "Return to destinations", destinations_path %></p>

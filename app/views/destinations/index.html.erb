@@ -1,6 +1,5 @@
 <div class="row">
 <h1 class="title">Welcome to Meika's Travel App</h1>
-<hr>
 
 <div class="col-md-6">
 <h2 class="second-title">Most Reviewed Destinations</h2>
@@ -29,7 +28,7 @@
 </div>
 
 <div class="col-md-6">
-<h1 class="second-title">Want to shop locally?</h1>
+<h1 class="second-title"></h1>
 <% if @destinations.any? %>
 <ul>
   <% @destinations.made_in_the_usa.each do |destination| %>
@@ -39,6 +38,6 @@
 </div>
 
 <% else %>
-<p>There are no reviews yet.</p>
+
 <% end %>
 </div>

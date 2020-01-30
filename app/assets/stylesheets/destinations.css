@@ -43,6 +43,7 @@ label {
 
 .container {
     padding-top: 80px;
+    padding-left: 80px;
     padding-bottom: 80px;
 }
 
@@ -59,7 +60,7 @@ label {
 
 .nav-bar-top {
     min-width: 100%;
-    background-color: #749604;
+    background-color: #8F53C0;
     height: 85px;
 }
 

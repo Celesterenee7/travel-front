@@ -38,7 +38,16 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'jquery'
+# ~NH~ ADDED FOLLOWING GEM AFTER NEW.
+gem 'jquery-rails'
+# ~NH~ ADDED FOLLOWING GEM AFTER NEW.
+gem 'bootstrap-sass', '~> 3.4.1'
+# ~NH~ ADDED FOLLOWING GEM AFTER NEW.
+# DATABASE Seeder
+gem 'faker'
+# ~NH~ ADDED FOLLOWING GEM AFTER NEW.
+# Authentication and Authorization
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
